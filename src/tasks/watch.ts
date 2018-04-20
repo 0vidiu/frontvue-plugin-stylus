@@ -2,7 +2,7 @@
  * Name: watch.ts
  * Description: Watch for changes in stylus partials
  * Author: Ovidiu Barabula <lectii2008@gmail.com>
- * @since 0.1.0
+ * @since 1.0.0
  */
 
 import chalk from 'chalk';

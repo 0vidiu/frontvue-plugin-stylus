@@ -2,7 +2,7 @@
  * Name: functions.ts
  * Description: Collection of utility functions
  * Author: Ovidiu Barabula <lectii2008@gmail.com>
- * @since 0.1.0
+ * @since 1.0.0
  */
 
 import { exists } from 'fs';

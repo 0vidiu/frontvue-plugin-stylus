@@ -2,7 +2,7 @@
  * Name: clean.ts
  * Description: Clean output directory
  * Author: Ovidiu Barabula <lectii2008@gmail.com>
- * @since 0.1.0
+ * @since 1.0.0
  */
 
 import * as path from 'path';

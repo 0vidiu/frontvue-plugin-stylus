@@ -2,7 +2,7 @@
  * Name: config-questionnaire.ts
  * Description: Configuration questionnaire
  * Author: Ovidiu Barabula <lectii2008@gmail.com>
- * @since 0.1.0
+ * @since 1.0.0
  */
 
 import defaults from './config-defaults';
