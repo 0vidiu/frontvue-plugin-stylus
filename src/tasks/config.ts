@@ -7,6 +7,8 @@
 
 import configDefaults from '../config/config-defaults';
 import configQuestionnaire from '../config/config-questionnaire';
+import dependencies from '../config/dependencies';
+
 
 export default {
   // Meta description
@@ -18,4 +20,7 @@ export default {
   // Configuration
   configDefaults,
   configQuestionnaire,
+
+  // Dependencies manifest
+  dependencies,
 };
