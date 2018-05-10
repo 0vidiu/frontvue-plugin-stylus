@@ -18,6 +18,12 @@ declare const _default: ({
             type: string;
         }[];
     };
+    dependencies: {
+        devDependencies: {
+            jeet: string;
+            rupture: string;
+        };
+    };
 } | {
     description: string;
     hook: string;
@@ -25,5 +31,6 @@ declare const _default: ({
     taskFn: (done: any, { logger, config, paths, env, gulp }?: any) => Promise<any>;
     configDefaults?: undefined;
     configQuestionnaire?: undefined;
+    dependencies?: undefined;
 })[];
 export default _default;

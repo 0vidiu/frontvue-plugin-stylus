@@ -18,5 +18,11 @@ declare const _default: {
             type: string;
         }[];
     };
+    dependencies: {
+        devDependencies: {
+            jeet: string;
+            rupture: string;
+        };
+    };
 };
 export default _default;
