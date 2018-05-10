@@ -20,8 +20,9 @@ declare const _default: {
     };
     dependencies: {
         devDependencies: {
-            jeet: string;
-            rupture: string;
+            'jeet': string;
+            'normalize-styl': string;
+            'rupture': string;
         };
     };
 };
