@@ -77,9 +77,10 @@ const configuration = {
     'gulp-uglifycss': 'gulp-uglifycss',
     path: 'path',
     rimraf: 'rimraf',
+    stylus: 'stylus',
     stylint: 'stylint',
     'stylint-stylish': 'stylint-stylish',
-    stylus: 'stylus',
+    'autoprefixer-stylus': 'autoprefixer-stylus',
   },
 
   plugins: [

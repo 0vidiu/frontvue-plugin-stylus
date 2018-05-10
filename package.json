@@ -57,6 +57,7 @@
     "gulp"
   ],
   "dependencies": {
+    "autoprefixer-stylus": "^0.14.0",
     "chalk": "^2.3.2",
     "gulp": "4.0.0",
     "gulp-if": "^2.0.2",

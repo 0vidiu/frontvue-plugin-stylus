@@ -5,6 +5,7 @@
  * @since 1.0.0
  */
 
+import * as autoprefixer from 'autoprefixer-stylus';
 import chalk from 'chalk';
 import * as gulpif from 'gulp-if';
 import * as insert from 'gulp-insert';
@@ -100,6 +101,7 @@ async function taskFn(done: any, { logger, config, paths, env, gulp }: any = {})
       paths: [
         'node_modules',
       ],
+      use: autoprefixer(),
     },
   };
 
