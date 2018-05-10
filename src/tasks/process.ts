@@ -96,6 +96,7 @@ async function taskFn(done: any, { logger, config, paths, env, gulp }: any = {})
     stylus: {
       import: [
         'jeet/styl',
+        'normalize-styl',
         'rupture',
       ],
       paths: [

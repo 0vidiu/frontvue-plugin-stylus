@@ -7,7 +7,8 @@
 
 export default {
   devDependencies: {
-    jeet: '^7.2.0',
-    rupture: '^0.7.1',
+    'jeet': '^7.2.0',
+    'normalize-styl': '^4.1.1',
+    'rupture': '^0.7.1',
   },
 };
