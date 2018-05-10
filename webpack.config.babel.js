@@ -28,17 +28,6 @@ const configuration = {
       {
         test: /\.tsx?$/,
         enforce: 'pre',
-        use: {
-          loader: 'tslint-loader',
-          options: {
-            configFile: 'tslint.json',
-          },
-        },
-        include,
-      },
-
-      {
-        test: /\.tsx?$/,
         use: [
           {
             loader: 'webpack-strip-block',
@@ -47,6 +36,19 @@ const configuration = {
               end: 'test:end',
             },
           },
+          {
+            loader: 'tslint-loader',
+            options: {
+              configFile: 'tslint.json',
+            },
+          },
+        ],
+        include,
+      },
+
+      {
+        test: /\.tsx?$/,
+        use: [
           {
             loader: 'awesome-typescript-loader',
             options: {
@@ -99,7 +101,7 @@ if (isDevelopment) {
  * CommonJS configuration
 */
 
-const mainConfiguration = Object.assign({}, configuration, {
+const mainConfiguration = {...configuration,
   output: {
     path: dist,
     filename: `${packageJson.name}.js`,
@@ -107,9 +109,9 @@ const mainConfiguration = Object.assign({}, configuration, {
     libraryTarget: 'commonjs2',
     libraryExport: 'default',
   },
-});
+};
 
-const mainMinifiedConfiguration = Object.assign({}, mainConfiguration, {
+const mainMinifiedConfiguration = {...mainConfiguration,
   output: {
     path: dist,
     filename: `${packageJson.name}.min.js`,
@@ -121,7 +123,7 @@ const mainMinifiedConfiguration = Object.assign({}, mainConfiguration, {
   optimization: {
     minimize: true,
   },
-});
+};
 
 
 /**
