@@ -107,14 +107,20 @@ async function taskFn(done: any, { logger, config, paths, env, gulp }: any = {})
   };
 
   return new Promise((resolve, reject) => {
-    // Set the source path and filter unchanged files
-    gulp.src(entryPointPath, { since: gulp.lastRun(taskFn) })
+    // Create stream for linting Stylus partials
+    gulp.src(path.join(sourceDirPath, '**/*.styl'))
       // Initialize gulp-plumber to prevent process termination in case of error
       .pipe(plumber({ errorHandler: error => logger.fatal(error.message) }))
       // Perform Stylus linting
       .pipe(stylint(configs.stylint))
       // Report Stylint errors if any
       .pipe(stylint.reporter())
+      .pipe(plumber.stop());
+
+    // Create stream for Stylus partials processing
+    gulp.src(entryPointPath, { since: gulp.lastRun(taskFn) })
+      // Initialize gulp-plumber to prevent process termination in case of error
+      .pipe(plumber({ errorHandler: error => logger.fatal(error.message) }))
       // Initialize source-maps only in development mode
       .pipe(gulpif(env === 'development', sourcemaps.init()))
       // Compile Stylus files
