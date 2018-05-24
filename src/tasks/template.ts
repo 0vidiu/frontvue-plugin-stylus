@@ -51,7 +51,7 @@ async function taskFn(done: any, { logger, config, paths, gulp }: any = {}) {
   // Copy template files to project source directory
   logger.debug(`${STRINGS.COPYING_TEMPLATE} ${chalk.cyan.bold(dest)}`);
   return new Promise((resolve, reject) => {
-    gulp.src(source, { dot: true })
+    gulp.src(source)
       // Initialize gulp-plumber to prevent process termination in case of error
       .pipe(plumber({ errorHandler: error => logger.fatal(error.message) }))
       .on('error', (error: any) => {

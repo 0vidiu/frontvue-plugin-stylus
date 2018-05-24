@@ -83,7 +83,7 @@ async function taskFn(done: any, { logger, config, paths, env, gulp }: any = {})
   const configs = {
     // Stylint configuration
     stylint: {
-      config: path.join(sourceDirPath, '.stylintrc'),
+      config: path.join(paths.cwd, '.stylintrc'),
       reporter: {
         reporter: 'stylint-stylish',
         reporterOptions: {
