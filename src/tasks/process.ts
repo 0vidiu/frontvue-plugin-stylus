@@ -94,6 +94,8 @@ async function taskFn(done: any, { logger, config, paths, env, gulp }: any = {})
     },
     // Stylus configuration
     stylus: {
+      /* tslint:disable */
+      'include css': true,
       import: [
         'jeet/styl',
         'normalize-styl',
@@ -103,6 +105,7 @@ async function taskFn(done: any, { logger, config, paths, env, gulp }: any = {})
         'node_modules',
       ],
       use: autoprefixer(),
+      /* tslint:enable */
     },
   };
 
