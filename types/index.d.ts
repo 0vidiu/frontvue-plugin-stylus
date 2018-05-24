@@ -2,7 +2,7 @@ declare const _default: ({
     description: string;
     hook: string;
     name: string;
-    taskFn: () => boolean;
+    taskFn: (done: any, { logger, paths, gulp }?: any) => Promise<any>;
     configDefaults: {
         sourceDir: string;
         entryPoint: string;
